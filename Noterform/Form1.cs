@@ -9,16 +9,12 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
 using Telegram;
-
-
 namespace Noterform
 {
     public partial class Form1 : Form
     {
-
         System.Globalization.PersianCalendar cal = new System.Globalization.PersianCalendar();
         int count = 0;
-
         public string shw_date()
         {
            // System.Globalization.PersianCalendar cal = new System.Globalization.PersianCalendar();
@@ -28,6 +24,7 @@ namespace Noterform
 
             return year + "/" + monthe + "/" + day;
         }
+        //====================================
         public void s(string usr_text, string message)
         {
             string id = bot.chat_id;
@@ -35,20 +32,9 @@ namespace Noterform
             if (bot.message_text.Contains(usr_text))
             {
                 bot.sendMessage.reply_to_message(id, message, mes_id);
-            }
-            
-                
+            }                                           
         }
-
-
-        //public string shw_time()
-        //{
-
-        //    string 
-        //}
-
-
-
+        //=======================================
         private void QWE()
             {
                 while (true)
@@ -68,7 +54,6 @@ namespace Noterform
         {
             InitializeComponent();
         }
-
         private void Form1_Load(object sender, EventArgs e)
         {
             Telegram.bot bot = new Telegram.bot();
@@ -83,202 +68,198 @@ namespace Noterform
             Thread TRD1 = new Thread(ts1);
             TRD1.Start();
         }
-
         private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
         {
-
             while (true)
             {
                 Telegram.bot.update = "true";
                 textBox2.Text = bot.update;
-                textBox1.Text = count.ToString();
-               
+                textBox1.Text = count.ToString();               
                 if (bot.message_text != "")
                 {
                     count++;
 
-                    if (bot.message_text.Contains("به تو چه"))
-                    {
-                        bot.sendMessage.reply_to_message(bot.chat_id, "bi adab nabash 😐", bot.message_id);
-
-                    }
-                    else if (bot.message_text.Contains("😂😂"))
-                    {
-                        bot.sendMessage.reply_to_message(bot.chat_id, "inghad nakhand yekammam gerye kon😐", bot.message_id);
-                    }
-                    else if (bot.message_text.Contains("😂"))
-                    {
-                        bot.sendMessage.reply_to_message(bot.chat_id, "nakhand 😐", bot.message_id);
-                    }
-                    else if (bot.message_text.Contains("😐"))
-                    {
-                        bot.sendMessage.reply_to_message(bot.chat_id, "asan to shakhi😐", bot.message_id);
-                    }
-                    if (bot.message_text.Contains("😡"))
-                    {
-                        bot.sendMessage.reply_to_message(bot.chat_id, "khobe khobe 😐", bot.message_id);
-                    }
-                    if (bot.message_text.Contains("😏"))
-                    {
-                        bot.sendMessage.reply_to_message(bot.chat_id, "heh!", bot.message_id);
-                    }
-                    else if (bot.message_text.Contains("?"))
-                    {
-                        bot.sendMessage.reply_to_message(bot.chat_id, "inja uni nist ke soal miporsi 😐", bot.message_id);
-                    }
-                    else if (bot.message_text.Contains("😳"))
-                    {
-                        bot.sendMessage.reply_to_message(bot.chat_id, "😐😐😐چیه بابا ", bot.message_id);
-                    }
-                    else if (bot.message_text.Contains("@"))
-                    {
-                        bot.sendMessage.reply_to_message(bot.chat_id, "😐😐😐تبلیغ نکن  ", bot.message_id);
-
-                    }
-
-                    else if (bot.message_text.Contains("😂😂😂"))
-                    {
-                        bot.sendMessage.reply_to_message(bot.chat_id, "بخند تا دنیا بروت بخنده  ", bot.message_id);
-
-                    }
-                    else if (bot.message_text.Contains("😂😂😂😂"))
-                    {
-                        bot.sendMessage.reply_to_message(bot.chat_id, "با دیوار که نیستم..میگم نخند :/  ", bot.message_id);
-
-                    }
-                    if (bot.message_text.Contains("خفه"))
-                    {
-                        bot.sendMessage.reply_to_message(bot.chat_id, "😱😱😱😱😱گفتی خفه..زنگ بزنم بابات ؟", bot.message_id);
-                    }
-                    else if (bot.message_text.Contains("پیشرفته"))
-                    {
-                        bot.sendMessage.reply_to_message(bot.chat_id, "تو مبانی پاس کردی حرف از پیشرفته میزنی😏😏 ", bot.message_id);
-                    }
-                    else if (bot.message_text.Contains("😌"))
-                    {
-                        bot.sendMessage.reply_to_message(bot.chat_id, "هیچ وقت مغرور نباش " +  Environment.NewLine + "هیچ وقت..", bot.message_id);
-                    }
-
-                    else if (bot.message_text.Contains("خیلی"))
-                    {
-                        bot.sendMessage.reply_to_message(bot.chat_id, "#اصیل_تر_صحبت_کنیم" + Environment.NewLine + "بجاش بگو بسیار", bot.message_id);
-                    }
-                    else if (bot.message_text.Contains("😍"))
-                    {
-                        bot.sendMessage.reply_to_message(bot.chat_id, " ", bot.message_id);
-                    }
-                    if (bot.message_text.Contains("❤️"))
-                    {
-                        bot.sendMessage.reply_to_message(bot.chat_id, "آرمان های امام رَ حفظ کن", bot.message_id);
-                    }
-                    else if (bot.message_text.Contains("خدافظ"))
-                    {
-                        bot.sendMessage.reply_to_message(bot.chat_id, "نرووووووووو😭😭😭😭", bot.message_id);
-                    }
-                    if (bot.message_text.Contains("😭"))
-                    {
-                        bot.sendMessage.reply_to_message(bot.chat_id, "گریه نکن که اشکات..(افرین خوب داری میخونی..ادامه بده..تو خوانندگی استعداد داری)", bot.message_id);
-                    }
-                    if (bot.message_text.Contains("شوخی"))
-                    {
-                        bot.sendMessage.reply_to_message(bot.chat_id, "مگه من با تو شوخی دارم ", bot.message_id);
-                    }
-                    if (bot.message_text.Contains("لفت"))
-                    {
-                        bot.sendMessage.reply_to_message(bot.chat_id, "بخدا اگه لفت بدی رگمو میزنم😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭 ", bot.message_id);
-                    }
-                    if (bot.message_text.Contains("😀"))
-                    {
-                        bot.sendMessage.reply_to_message(bot.chat_id, "خوشحال باش..میگذره", bot.message_id);
-                    }
-                    if (bot.message_text.Contains("😔"))
-                    {
-                        bot.sendMessage.reply_to_message(bot.chat_id, "نبینم غمتو😢😢😢😢 ", bot.message_id);
-                    }
-                    if (bot.message_text.Contains("سلام"))
-                    {
-                        bot.sendMessage.reply_to_message(bot.chat_id, "😃😃 سلام😃😃 منکه چطورم..تو چطوری؟؟ ", bot.message_id);
-                    }
-
-                    if (bot.message_text.Contains("شب بخیر"))
-                    {
-                        bot.sendMessage.reply_to_message(bot.chat_id, "ستاره بچینی ..خدافظ", bot.message_id);
-                    }
-                    if (bot.message_text.Contains("چندمه"))
-                    {
-                        bot.sendMessage.reply_to_message(bot.chat_id, shw_date(), bot.message_id);
-                    }
-
-                    if (bot.message_text == "تاریخ")
-                    {
-                        bot.sendMessage.reply_to_message(bot.chat_id, shw_date(), bot.message_id);
-                    }
-                    if (bot.message_text.Contains("جالب"))
-                    {
-
-                        bot.sendMessage.reply_to_message(bot.chat_id, "جالب میدونی چیه؟"+Environment.NewLine+"امروز "+cal.GetDayOfYear(DateTime.Now).ToString()+"امین روز سال هست !!  "/*+ cal.GetYear(DateTime.Now).ToString()*/, bot.message_id);
-                    }
-                    if (bot.message_text.Contains(""))
+                    /* if (bot.message_text.Contains("به تو چه"))
                      {
-                        s("خوبی؟", "ممنون تو چطوری ؟😍😍😍");
-                    }
-                    if (bot.message_text.Contains(""))
-                    {
-                        s("چخبر", "سلامتی رهبر");
-                    }
-                    /* if (bot.message_text.Contains(""))
-                    {
-                        bot.sendMessage.reply_to_message(bot.chat_id, "", bot.message_id);
-                    }
-                    if (bot.message_text.Contains(""))
-                    {
-                        bot.sendMessage.reply_to_message(bot.chat_id, "", bot.message_id);
-                    }
-                    if (bot.message_text.Contains(""))
-                    {
-                        bot.sendMessage.reply_to_message(bot.chat_id, "", bot.message_id);
-                    }
-                    if (bot.message_text.Contains(""))
-                    {
-                        bot.sendMessage.reply_to_message(bot.chat_id, "", bot.message_id);
-                    }
-                    if (bot.message_text.Contains(""))
-                    {
-                        bot.sendMessage.reply_to_message(bot.chat_id, "", bot.message_id);
-                    }
-                    if (bot.message_text.Contains(""))
-                    {
-                        bot.sendMessage.reply_to_message(bot.chat_id, "", bot.message_id);
-                    }
-                    if (bot.message_text.Contains(""))
-                    {
-                        bot.sendMessage.reply_to_message(bot.chat_id, "", bot.message_id);
-                    }
-                    if (bot.message_text.Contains(""))
-                    {
-                        bot.sendMessage.reply_to_message(bot.chat_id, "", bot.message_id);
-                    }
-                    if (bot.message_text.Contains(""))
-                    {
-                        bot.sendMessage.reply_to_message(bot.chat_id, "", bot.message_id);
-                    }
-                    if (bot.message_text.Contains(""))
-                    {
-                        bot.sendMessage.reply_to_message(bot.chat_id, "", bot.message_id);
-                    }
-                    if (bot.message_text.Contains(""))
-                    {
-                        bot.sendMessage.reply_to_message(bot.chat_id, "", bot.message_id);
-                    }
-                    if (bot.message_text.Contains(""))
-                    {
-                        bot.sendMessage.reply_to_message(bot.chat_id, "", bot.message_id);
-                    }  */
+                         bot.sendMessage.reply_to_message(bot.chat_id, "bi adab nabash 😐", bot.message_id);
+
+                     }
+                     else if (bot.message_text.Contains("😂😂"))
+                     {
+                         bot.sendMessage.reply_to_message(bot.chat_id, "inghad nakhand yekammam gerye kon😐", bot.message_id);
+                     }
+                     else if (bot.message_text.Contains("😂"))
+                     {
+                         bot.sendMessage.reply_to_message(bot.chat_id, "nakhand 😐", bot.message_id);
+                     }
+                     else if (bot.message_text.Contains("😐"))
+                     {
+                         bot.sendMessage.reply_to_message(bot.chat_id, "asan to shakhi😐", bot.message_id);
+                     }
+                     if (bot.message_text.Contains("😡"))
+                     {
+                         bot.sendMessage.reply_to_message(bot.chat_id, "khobe khobe 😐", bot.message_id);
+                     }
+                     if (bot.message_text.Contains("😏"))
+                     {
+                         bot.sendMessage.reply_to_message(bot.chat_id, "heh!", bot.message_id);
+                     }
+                     else if (bot.message_text.Contains("?"))
+                     {
+                         bot.sendMessage.reply_to_message(bot.chat_id, "inja uni nist ke soal miporsi 😐", bot.message_id);
+                     }
+                     else if (bot.message_text.Contains("😳"))
+                     {
+                         bot.sendMessage.reply_to_message(bot.chat_id, "😐😐😐چیه بابا ", bot.message_id);
+                     }
+                     else if (bot.message_text.Contains("@"))
+                     {
+                         bot.sendMessage.reply_to_message(bot.chat_id, "😐😐😐تبلیغ نکن  ", bot.message_id);
+
+                     }
+
+                     else if (bot.message_text.Contains("😂😂😂"))
+                     {
+                         bot.sendMessage.reply_to_message(bot.chat_id, "بخند تا دنیا بروت بخنده  ", bot.message_id);
+
+                     }
+                     else if (bot.message_text.Contains("😂😂😂😂"))
+                     {
+                         bot.sendMessage.reply_to_message(bot.chat_id, "با دیوار که نیستم..میگم نخند :/  ", bot.message_id);
+
+                     }
+                     if (bot.message_text.Contains("خفه"))
+                     {
+                         bot.sendMessage.reply_to_message(bot.chat_id, "😱😱😱😱😱گفتی خفه..زنگ بزنم بابات ؟", bot.message_id);
+                     }
+                     else if (bot.message_text.Contains("پیشرفته"))
+                     {
+                         bot.sendMessage.reply_to_message(bot.chat_id, "تو مبانی پاس کردی حرف از پیشرفته میزنی😏😏 ", bot.message_id);
+                     }
+                     else if (bot.message_text.Contains("😌"))
+                     {
+                         bot.sendMessage.reply_to_message(bot.chat_id, "هیچ وقت مغرور نباش " +  Environment.NewLine + "هیچ وقت..", bot.message_id);
+                     }
+
+                     else if (bot.message_text.Contains("خیلی"))
+                     {
+                         bot.sendMessage.reply_to_message(bot.chat_id, "#اصیل_تر_صحبت_کنیم" + Environment.NewLine + "بجاش بگو بسیار", bot.message_id);
+                     }
+                     else if (bot.message_text.Contains("😍"))
+                     {
+                         bot.sendMessage.reply_to_message(bot.chat_id, " ", bot.message_id);
+                     }
+                     if (bot.message_text.Contains("❤️"))
+                     {
+                         bot.sendMessage.reply_to_message(bot.chat_id, "آرمان های امام رَ حفظ کن", bot.message_id);
+                     }
+                     else if (bot.message_text.Contains("خدافظ"))
+                     {
+                         bot.sendMessage.reply_to_message(bot.chat_id, "نرووووووووو😭😭😭😭", bot.message_id);
+                     }
+                     if (bot.message_text.Contains("😭"))
+                     {
+                         bot.sendMessage.reply_to_message(bot.chat_id, "گریه نکن که اشکات..(افرین خوب داری میخونی..ادامه بده..تو خوانندگی استعداد داری)", bot.message_id);
+                     }
+                     if (bot.message_text.Contains("شوخی"))
+                     {
+                         bot.sendMessage.reply_to_message(bot.chat_id, "مگه من با تو شوخی دارم ", bot.message_id);
+                     }
+                     if (bot.message_text.Contains("لفت"))
+                     {
+                         bot.sendMessage.reply_to_message(bot.chat_id, "بخدا اگه لفت بدی رگمو میزنم😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭 ", bot.message_id);
+                     }
+                     if (bot.message_text.Contains("😀"))
+                     {
+                         bot.sendMessage.reply_to_message(bot.chat_id, "خوشحال باش..میگذره", bot.message_id);
+                     }
+                     if (bot.message_text.Contains("😔"))
+                     {
+                         bot.sendMessage.reply_to_message(bot.chat_id, "نبینم غمتو😢😢😢😢 ", bot.message_id);
+                     }
+                     if (bot.message_text.Contains("سلام"))
+                     {
+                         bot.sendMessage.reply_to_message(bot.chat_id, "😃😃 سلام😃😃 منکه چطورم..تو چطوری؟؟ ", bot.message_id);
+                     }
+
+                     if (bot.message_text.Contains("شب بخیر"))
+                     {
+                         bot.sendMessage.reply_to_message(bot.chat_id, "ستاره بچینی ..خدافظ", bot.message_id);
+                     }
+                     if (bot.message_text.Contains("چندمه"))
+                     {
+                         bot.sendMessage.reply_to_message(bot.chat_id, shw_date(), bot.message_id);
+                     }
+
+                     if (bot.message_text == "تاریخ")
+                     {
+                         bot.sendMessage.reply_to_message(bot.chat_id, shw_date(), bot.message_id);
+                     }
+                     if (bot.message_text.Contains("جالب"))
+                     {
+
+                         bot.sendMessage.reply_to_message(bot.chat_id, "جالب میدونی چیه؟"+Environment.NewLine+"امروز "+cal.GetDayOfYear(DateTime.Now).ToString()+"امین روز سال هست !!  ", bot.message_id);
+                     }  
+                     if (bot.message_text.Contains(""))
+                      {
+                         s("خوبی؟", "ممنون تو چطوری ؟😍😍😍");
+                     }
+                     if (bot.message_text.Contains(""))
+                     {
+                         s("چخبر", "سلامتی رهبر");
+                     } 
+                     if (bot.message_text.Contains(""))
+                     {
+                         bot.sendMessage.reply_to_message(bot.chat_id, "", bot.message_id);
+                     }
+                     if (bot.message_text.Contains(""))
+                     {
+                         bot.sendMessage.reply_to_message(bot.chat_id, "", bot.message_id);
+                     }
+                     if (bot.message_text.Contains(""))
+                     {
+                         bot.sendMessage.reply_to_message(bot.chat_id, "", bot.message_id);
+                     }
+                     if (bot.message_text.Contains(""))
+                     {
+                         bot.sendMessage.reply_to_message(bot.chat_id, "", bot.message_id);
+                     }
+                     if (bot.message_text.Contains(""))
+                     {
+                         bot.sendMessage.reply_to_message(bot.chat_id, "", bot.message_id);
+                     }
+                     if (bot.message_text.Contains(""))
+                     {
+                         bot.sendMessage.reply_to_message(bot.chat_id, "", bot.message_id);
+                     }
+                     if (bot.message_text.Contains(""))
+                     {
+                         bot.sendMessage.reply_to_message(bot.chat_id, "", bot.message_id);
+                     }
+                     if (bot.message_text.Contains(""))
+                     {
+                         bot.sendMessage.reply_to_message(bot.chat_id, "", bot.message_id);
+                     }
+                     if (bot.message_text.Contains(""))
+                     {
+                         bot.sendMessage.reply_to_message(bot.chat_id, "", bot.message_id);
+                     }
+                     if (bot.message_text.Contains(""))
+                     {
+                         bot.sendMessage.reply_to_message(bot.chat_id, "", bot.message_id);
+                     }
+                     if (bot.message_text.Contains(""))
+                     {
+                         bot.sendMessage.reply_to_message(bot.chat_id, "", bot.message_id);
+                     }
+                     if (bot.message_text.Contains(""))
+                     {
+                         bot.sendMessage.reply_to_message(bot.chat_id, "", bot.message_id);
+                     }  */
 
 
-
-
-
+                    s("چخبر", "سلامتی رهبر");
+                    s("slm", "salam khoobi??");
 
                 }
             }
@@ -290,10 +271,10 @@ namespace Noterform
             System.Environment.Exit(0);
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
+        //private void button1_Click(object sender, EventArgs e)
+        //{
 
-            MessageBox.Show(count.ToString());
-        }
+        //    MessageBox.Show(count.ToString());
+        //}
     }
 }
