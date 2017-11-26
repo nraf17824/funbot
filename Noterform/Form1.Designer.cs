@@ -50,9 +50,9 @@
             // 
             // textBox1
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.Aqua;
+            this.textBox1.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.textBox1.Location = new System.Drawing.Point(0, 1);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";

@@ -28,6 +28,18 @@ namespace Noterform
 
             return year + "/" + monthe + "/" + day;
         }
+        public void s(string usr_text, string message)
+        {
+            string id = bot.chat_id;
+            string mes_id = bot.message_id;
+            if (bot.message_text.Contains(usr_text))
+            {
+                bot.sendMessage.reply_to_message(id, message, mes_id);
+            }
+            
+                
+        }
+
 
         //public string shw_time()
         //{
@@ -206,62 +218,62 @@ namespace Noterform
 
                         bot.sendMessage.reply_to_message(bot.chat_id, "جالب میدونی چیه؟"+Environment.NewLine+"امروز "+cal.GetDayOfYear(DateTime.Now).ToString()+"امین روز سال هست !!  "/*+ cal.GetYear(DateTime.Now).ToString()*/, bot.message_id);
                     }
+                    if (bot.message_text.Contains(""))
+                     {
+                        s("خوبی؟", "ممنون تو چطوری ؟😍😍😍");
+                    }
                     /* if (bot.message_text.Contains(""))
-                     {
-                         bot.sendMessage.reply_to_message(bot.chat_id, "", bot.message_id);
-                     }
-                     if (bot.message_text.Contains(""))
-                     {
-                         bot.sendMessage.reply_to_message(bot.chat_id, "", bot.message_id);
-                     }
-                     if (bot.message_text.Contains(""))
-                     {
-                         bot.sendMessage.reply_to_message(bot.chat_id, "", bot.message_id);
-                     }
-                     if (bot.message_text.Contains(""))
-                     {
-                         bot.sendMessage.reply_to_message(bot.chat_id, "", bot.message_id);
-                     }
-                     if (bot.message_text.Contains(""))
-                     {
-                         bot.sendMessage.reply_to_message(bot.chat_id, "", bot.message_id);
-                     }
-                     if (bot.message_text.Contains(""))
-                     {
-                         bot.sendMessage.reply_to_message(bot.chat_id, "", bot.message_id);
-                     }
-                     if (bot.message_text.Contains(""))
-                     {
-                         bot.sendMessage.reply_to_message(bot.chat_id, "", bot.message_id);
-                     }
-                     if (bot.message_text.Contains(""))
-                     {
-                         bot.sendMessage.reply_to_message(bot.chat_id, "", bot.message_id);
-                     }
-                     if (bot.message_text.Contains(""))
-                     {
-                         bot.sendMessage.reply_to_message(bot.chat_id, "", bot.message_id);
-                     }
-                     if (bot.message_text.Contains(""))
-                     {
-                         bot.sendMessage.reply_to_message(bot.chat_id, "", bot.message_id);
-                     }
-                     if (bot.message_text.Contains(""))
-                     {
-                         bot.sendMessage.reply_to_message(bot.chat_id, "", bot.message_id);
-                     }
-                     if (bot.message_text.Contains(""))
-                     {
-                         bot.sendMessage.reply_to_message(bot.chat_id, "", bot.message_id);
-                     }
-                     if (bot.message_text.Contains(""))
-                     {
-                         bot.sendMessage.reply_to_message(bot.chat_id, "", bot.message_id);
-                     }
-                     if (bot.message_text.Contains(""))
-                     {
-                         bot.sendMessage.reply_to_message(bot.chat_id, "", bot.message_id);
-                     }  */
+                    {
+                        bot.sendMessage.reply_to_message(bot.chat_id, "", bot.message_id);
+                    }
+                    if (bot.message_text.Contains(""))
+                    {
+                        bot.sendMessage.reply_to_message(bot.chat_id, "", bot.message_id);
+                    }
+                    if (bot.message_text.Contains(""))
+                    {
+                        bot.sendMessage.reply_to_message(bot.chat_id, "", bot.message_id);
+                    }
+                    if (bot.message_text.Contains(""))
+                    {
+                        bot.sendMessage.reply_to_message(bot.chat_id, "", bot.message_id);
+                    }
+                    if (bot.message_text.Contains(""))
+                    {
+                        bot.sendMessage.reply_to_message(bot.chat_id, "", bot.message_id);
+                    }
+                    if (bot.message_text.Contains(""))
+                    {
+                        bot.sendMessage.reply_to_message(bot.chat_id, "", bot.message_id);
+                    }
+                    if (bot.message_text.Contains(""))
+                    {
+                        bot.sendMessage.reply_to_message(bot.chat_id, "", bot.message_id);
+                    }
+                    if (bot.message_text.Contains(""))
+                    {
+                        bot.sendMessage.reply_to_message(bot.chat_id, "", bot.message_id);
+                    }
+                    if (bot.message_text.Contains(""))
+                    {
+                        bot.sendMessage.reply_to_message(bot.chat_id, "", bot.message_id);
+                    }
+                    if (bot.message_text.Contains(""))
+                    {
+                        bot.sendMessage.reply_to_message(bot.chat_id, "", bot.message_id);
+                    }
+                    if (bot.message_text.Contains(""))
+                    {
+                        bot.sendMessage.reply_to_message(bot.chat_id, "", bot.message_id);
+                    }
+                    if (bot.message_text.Contains(""))
+                    {
+                        bot.sendMessage.reply_to_message(bot.chat_id, "", bot.message_id);
+                    }
+                    if (bot.message_text.Contains(""))
+                    {
+                        bot.sendMessage.reply_to_message(bot.chat_id, "", bot.message_id);
+                    }  */
 
 
 
