@@ -222,11 +222,11 @@ namespace Noterform
                      {
                         s("خوبی؟", "ممنون تو چطوری ؟😍😍😍");
                     }
-                    /* if (bot.message_text.Contains(""))
-                    {
-                        bot.sendMessage.reply_to_message(bot.chat_id, "", bot.message_id);
-                    }
                     if (bot.message_text.Contains(""))
+                    {
+                        s("چخبر", "سلامتی رهبر");
+                    }
+                    /* if (bot.message_text.Contains(""))
                     {
                         bot.sendMessage.reply_to_message(bot.chat_id, "", bot.message_id);
                     }
